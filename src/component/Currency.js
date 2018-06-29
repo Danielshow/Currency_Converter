@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Modals from './Modal'
 
 class Currency extends Component{
   constructor(props){
@@ -44,9 +45,9 @@ handleChangeTo(event){
                   <option value="UYU" >UYU</option>
               </select>
             </div>
-                my portfolio
-            <div className= "col-md-4">
 
+            <div className= "col-md-4">
+                <Modals />
             </div>
         </div>
       </div>

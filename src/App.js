@@ -16,6 +16,7 @@ class App extends Component {
         <Currency />
         <Footer />
       </div>
+
     );
   }
 }
