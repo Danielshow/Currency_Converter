@@ -8,6 +8,7 @@ class Currency extends Component{
       convertto: ''
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleChangeTo = this.handleChangeTo.bind(this);
   }
 
   handleChange(event){
@@ -16,7 +17,12 @@ class Currency extends Component{
       convertto: event.target.value * 4
     });
   }
-
+handleChangeTo(event){
+    this.setState({
+      convertto: event.target.value,
+      convertfrom: event.target.value/4
+    });
+}
   render(){
     return(
       <div className="container">
@@ -30,7 +36,7 @@ class Currency extends Component{
                   <option value="USD">USD</option>
                   <option value="UYU" >UYU</option>
               </select>
-              <input type='text' className = "form-control form-control-sm" value={this.state.convertto}></input>
+              <input type='text' className = "form-control form-control-sm" value={this.state.convertto} onChange = {this.handleChangeTo}></input>
               <select id="CURR_TO" className= "mb-4 mt-2">
                   <option value="BYN" >BYN</option>
                   <option value="GBP">GBP</option>
