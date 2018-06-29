@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-//import logo from './logo.svg';
 import { Navbar, NavbarBrand } from 'reactstrap';
-import Menu from './component/MenuComponent'
-import Footer from './component/Footer'
+import Footer from './component/Footer';
+import Currency from './component/Currency';
 import './App.css';
 
 class App extends Component {
@@ -11,10 +10,10 @@ class App extends Component {
       <div className="App">
         <Navbar dark color="primary">
             <div className="container">
-              <NavbarBrand href="/"> Daniel Show </NavbarBrand>
+              <NavbarBrand href="/"> Currency Converter </NavbarBrand>
             </div>
         </Navbar>
-        <Menu />
+        <Currency />
         <Footer />
       </div>
     );
