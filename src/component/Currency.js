@@ -19,38 +19,54 @@ class Currency extends Component{
   }
 
   handleChange(event){
-    let converted = convertCurrency(event.target.value, this.state.valueFrom, this.state.valueTo, function(err, amount) {
-      return amount
-    });
     this.setState({
-      convertfrom: event.target.value,
-      convertto: ''
+      convertfrom: event.target.value
     });
+    convertCurrency(event.target.value, this.state.valueFrom, this.state.valueTo, (err, amount) => {
+        this.setState({
+          convertto: amount
+        });
+      });
   }
 
 handleChangeTo(event){
-    this.setState({
-      convertto: event.target.value,
-      convertfrom: event.target.value/4
-    });
+  this.setState({
+    convertto: event.target.value
+  });
+  convertCurrency(event.target.value, this.state.valueTo, this.state.valueFrom, (err, amount) => {
+      this.setState({
+        convertfrom: amount
+      });
+ });
+
 }
 
 handleSelectChangeFrom(event){
   this.setState({
-    valueFrom: event.target.value
+    valueFrom: event.target.value,
   });
+  convertCurrency(this.state.convertfrom, event.target.value, this.state.valueTo, (err, amount) => {
+      this.setState({
+        convertto: amount
+      });
+    });
+
 }
 
 handleSelectChangeTo(event){
   this.setState({
     valueTo: event.target.value
   });
+
+  convertCurrency(this.state.convertto, event.target.value, this.state.valueFrom, (err, amount) => {
+      this.setState({
+        convertfrom: amount
+      });
+ });
 }
 
 render(){
-  convertCurrency(this.state.convertfrom, this.state.valueFrom, this.state.valueTo, (err, amount) => {
-    console.log(amount)
-  });
+ //convertCurrency(this.state.convertfrom, this.state.valueFrom, this.state.valueTo, (err, amount) => console.log(amount));
   return(
       <div className="container">
         <div className = "row">

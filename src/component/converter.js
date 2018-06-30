@@ -38,5 +38,5 @@ function convertCurrency(amount, fromCurrency, toCurrency, cb) {
   });
 }
 
-//uncomment to test
+
 export default convertCurrency;
