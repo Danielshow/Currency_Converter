@@ -6,8 +6,12 @@
   "dependencies": {
     "ajv": "^6.0.0",
     "bootstrap": "^4.0.0",
+<<<<<<< HEAD
     "gh-pages": "^1.2.0",
     "jquery": "^1.9.1",
+=======
+    "jquery": "^3.3.1",
+>>>>>>> fbeb9ec
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-popper": "^0.9.2",
