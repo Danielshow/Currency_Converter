@@ -171,7 +171,7 @@ render(){
               </div>
             </div>
 
-            <div className= "col-md-4">
+            <div className= "col-md-4 text-center">
                 <Modals />
             </div>
         </div>
