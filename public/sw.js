@@ -3,7 +3,7 @@ const version='currency_v1_0.01';
 self.addEventListener("install", function(event){
   event.waitUntil(
     caches
-    .open('version')
+    .open(version)
     .then(function(cache){
         return cache.addAll([
           '/',
