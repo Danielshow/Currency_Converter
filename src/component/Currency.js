@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Modals from './Modal'
 import convertCurrency from './converter';
 
+
 class Currency extends Component{
   constructor(props){
     super(props);
@@ -73,24 +74,105 @@ render(){
             <div className = "col-md-8">
               <h3 className="text-center">Currency Converter</h3>
               <input type='text' className = "form-control form-control-sm" value={this.state.convertfrom} onChange = {this.handleChange}></input>
-              <select id="CURR_FROM" className="mb-4 mt-2" onChange = {this.handleSelectChangeFrom}>
-                  <option value="BYN" >BYN</option>
-                  <option value="GBP" selected>GBP</option>
-                  <option value="USD">USD</option>
-                  <option value="UYU" >UYU</option>
-              </select>
+              <div className="row">
+                  <div className="col-md-4"></div>
+                  <div className="col-md-4">
+                      <select className="form-control mb-4 mt-2" onChange = {this.handleSelectChangeFrom}>
+                          <option value="AED" >AED</option>
+                          <option value="AFN" >AFN</option>
+                          <option value="ALL" >ALL</option>
+                          <option value="AMD" >AMD</option>
+                          <option value="ANG" >ANG</option>
+                          <option value="AOA" >AOA</option>
+                          <option value="ARS" >ARS</option>
+                          <option value="AUD" >AUD</option>
+                          <option value="AWG" >AWG</option>
+                          <option value="AZN" >AZN</option>
+                          <option value="BAM" >BAM</option>
+                          <option value="BBD" >BBD</option>
+                          <option value="BDT" >BDT</option>
+                          <option value="BGN" >BGN</option>
+                          <option value="BHD" >BHD</option>
+                          <option value="BIF" >BIF</option>
+                          <option value="BND" >BND</option>
+                          <option value="CVE" >CVE</option>
+                          <option value="CZK" >CZK</option>
+                          <option value="DJF" >DJF</option>
+                          <option value="DKK" >DKK</option>
+                          <option value="DOP" >DOP</option>
+                          <option value="DZD" >DZD</option>
+                          <option value="GBP" selected>GBP</option>
+                          <option value="MWK" >MWK</option>
+                          <option value="MXN" >MXN</option>
+                          <option value="MYR" >MYR</option>
+                          <option value="MZN" >MZN</option>
+                          <option value="NAD" >NAD</option>
+                          <option value="NGN" >NGN</option>
+                          <option value="NIO" >NIO</option>
+                          <option value="NOK" >NOK</option>
+                          <option value="USD" >USD</option>
+                          <option value="UYU" >UYU</option>
+                          <option value="UZS" >UZS</option>
+                          <option value="VEF" >VEF</option>
+                          <option value="VND" >VND</option>
+                          <option value="ZAR" >ZAR</option>
+                          <option value="ZMW" >ZMW</option>
+                      </select>
+                  </div>
+                  <div className="col-md-4"></div>
+              </div>
               <input type='text' className = "form-control form-control-sm" value={this.state.convertto} onChange = {this.handleChangeTo}></input>
-              <select id="CURR_TO" className= "mb-4 mt-2" onChange={this.handleSelectChangeTo}>
-                  <option value="BYN" >BYN</option>
-                  <option value="GBP">GBP</option>
-                  <option value="USD" selected>USD</option>
-                  <option value="UYU" >UYU</option>
-              </select>
+              <div className="row">
+                  <div className="col-md-4"></div>
+                  <div className="col-md-4">
+                    <select className= "form-control mb-4 mt-2" onChange={this.handleSelectChangeTo}>
+                        <option value="AED" >AED</option>
+                        <option value="AFN" >AFN</option>
+                        <option value="ALL" >ALL</option>
+                        <option value="AMD" >AMD</option>
+                        <option value="ANG" >ANG</option>
+                        <option value="AOA" >AOA</option>
+                        <option value="ARS" >ARS</option>
+                        <option value="AUD" >AUD</option>
+                        <option value="AWG" >AWG</option>
+                        <option value="AZN" >AZN</option>
+                        <option value="BAM" >BAM</option>
+                        <option value="BBD" >BBD</option>
+                        <option value="BDT" >BDT</option>
+                        <option value="BGN" >BGN</option>
+                        <option value="BHD" >BHD</option>
+                        <option value="BIF" >BIF</option>
+                        <option value="BND" >BND</option>
+                        <option value="CVE" >CVE</option>
+                        <option value="CZK" >CZK</option>
+                        <option value="DJF" >DJF</option>
+                        <option value="DKK" >DKK</option>
+                        <option value="DOP" >DOP</option>
+                        <option value="DZD" >DZD</option>
+                        <option value="GBP" >GBP</option>
+                        <option value="MWK" >MWK</option>
+                        <option value="MXN" >MXN</option>
+                        <option value="MYR" >MYR</option>
+                        <option value="MZN" >MZN</option>
+                        <option value="NAD" >NAD</option>
+                        <option value="NGN" >NGN</option>
+                        <option value="NIO" >NIO</option>
+                        <option value="NOK" >NOK</option>
+                        <option value="USD" selected>USD</option>
+                        <option value="UYU" >UYU</option>
+                        <option value="UZS" >UZS</option>
+                        <option value="VEF" >VEF</option>
+                        <option value="VND" >VND</option>
+                        <option value="ZAR" >ZAR</option>
+                        <option value="ZMW" >ZMW</option>
+                    </select>
+                  </div>
+                  <div className="col-md-4"></div>
+              </div>
             </div>
 
             <div className= "col-md-4">
                 <Modals />
-
             </div>
         </div>
       </div>
