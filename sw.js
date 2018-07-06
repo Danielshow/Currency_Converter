@@ -6,8 +6,14 @@ self.addEventListener("install", (event) => {
     .open(version)
     .then((cache) => {
         return cache.addAll([
-          '/',
-          '/static/js/bundle.js',
+         '/',
+          '/static/js/main.84564ca5.js',
+          '/static/js/main.84564ca5.js.map',
+          '/static/css/main.ca83e231.css',
+          '/static/css/main.ca83e231.css.map',
+          '/index.html',
+          '/service-worker.js',
+          '/sw.js'
         ]);
     })
     .then(() => {
