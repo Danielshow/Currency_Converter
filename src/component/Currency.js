@@ -23,6 +23,7 @@ class Currency extends Component{
     this.setState({
       convertfrom: event.target.value
     });
+
     convertCurrency(event.target.value, this.state.valueFrom, this.state.valueTo, (err, amount) => {
         this.setState({
           convertto: amount

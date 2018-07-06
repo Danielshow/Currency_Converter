@@ -4,6 +4,7 @@ import Footer from './component/Footer';
 import Currency from './component/Currency';
 import './App.css';
 
+
 class App extends Component {
   render() {
     return (
